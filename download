@@ -1,0 +1,22 @@
+# ---- DADOS REAIS NUNCA VÃO PRO GITHUB (as pastas abaixo são da raiz do projeto, onde roda a versão real) ----
+/dados_entrada/
+/controle/
+/controle_teste/
+/saida/
+/saida_teste/
+
+# estado gerado pela demonstração (os relatórios fictícios de demo/saida/ SÃO versionados de propósito)
+/demo/controle/
+
+# ambiente e lixo de execução
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+.DS_Store
+Thumbs.db
+
+# arquivos temporários do Excel (aparecem enquanto a planilha está aberta)
+~$*.xls*
+*.tmp

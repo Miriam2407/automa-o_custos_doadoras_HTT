@@ -1,0 +1,3 @@
+# só pra gerar as IMAGENS da demonstração (demo/gerar_prints.py) - a automação NÃO precisa disso.
+# Além do pacote abaixo, precisa do LibreOffice ("soffice") e do poppler ("pdftoppm") instalados.
+pillow>=10.0

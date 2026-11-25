@@ -1,0 +1,39 @@
+== Reconciliação 2026-09 ==
+1. Carregando lista de doadoras do mês...
+   [info] a lista tem 8 doadora(s) de outros meses (2026-08) - ignoradas; só as de 2026-09 foram usadas
+  [aviso] 1 linha(s) de 2026-09 têm PIN mas estão SEM NOME e foram ignoradas (PIN: 100999) - preencha o nome na lista pra elas entrarem no matching e no rateio
+   9 doadoras nesta planilha
+2. Atualizando cadastro mestre histórico...
+   17 nomes distintos no cadastro mestre acumulado
+3. Carregando arquivos de custo por doadora (Uber, Táxi, Cerba, Ajuda de Custo, Medicamentos)...
+  [ok] lendo 'AJUDA DE CUSTO.xlsx' como AJUDA_DE_CUSTO
+  [ok] lendo 'TAXI.xlsx' como TRANSPORTE_TAXI
+  [ok] lendo 'UBER.xlsx' como TRANSPORTE_UBER
+  [ok] lendo 'CERBA.xlsx' como EXAMES_CERBA
+  [ok] lendo 'GENETICA.xlsx' como TESTES_GENETICOS
+   109 lançamentos carregados
+4. Carregando custos rateados (Médicos / Insumos / MGR)...
+  [ok] lendo 'CUSTOS RATEADOS.xlsx' como custo rateado (9 doadoras no mês)
+   18 linhas geradas pelo rateio (INSUMOS/MGR)
+  [ok] MEDICOS: R$ 16100.00 (referente a 2026-08, estava em SALDO) rateado entre 9 doadoras = R$ 1788.89 cada
+       lembrete: marque STATUS='CONSUMIDO' nessa(s) linha(s) na planilha, e adicione a linha de 2026-09 com STATUS='SALDO'
+   9 linhas geradas pelo rateio de MEDICOS
+4b. Carregando saldo inicial de 'dados_entrada/saldo_em_aberto_demo.xlsx' (só acontece 1x)...
+  [ok] lendo aba 'Taxi' do saldo inicial (3 linhas) como TRANSPORTE_TAXI
+  [ok] lendo aba 'Cerba' do saldo inicial (6 linhas) como EXAMES_CERBA
+  [ok] lendo aba 'Ajuda de Custo' do saldo inicial (2 linhas) como AJUDA_DE_CUSTO
+  [ok] lendo aba 'Uber' do saldo inicial (2 linhas) como TRANSPORTE_UBER
+  [ok] lendo aba 'Medicamentos' do saldo inicial (3 linhas) como MEDICAMENTOS_4BIO
+  [info] 14 nomes/categorias do saldo inicial semeados no controle com a data de origem correta
+   16 linhas do saldo inicial vão entrar no matching deste mês
+5. Fazendo o matching e classificando SALDO/AJUSTES...
+   Resultado do matching:
+     doadora identificada: 107
+     SALDO: 38
+     AJUSTES: 7
+6. Atualizando controle de doadoras (histórico completo)...
+   17 linhas no histórico de doadoras
+7. Gerando relatório Excel...
+   conferência do mês anterior: 'saida/conferencia_doadoras_2026-08.xlsx'
+   5 linha(s) de AJUSTE mantida(s) no SALDO pendente (R$ 4,350.00) - retire manualmente do saldo
+   Relatório salvo em: saida/relatorio_reconciliacao_2026-09.xlsx

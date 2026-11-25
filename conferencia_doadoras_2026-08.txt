@@ -1,0 +1,13 @@
+== Conferência Doadoras 2026-08 ==
+1. Lendo o SALDO pendente já contabilizado em 'saida/relatorio_reconciliacao_2026-08.xlsx'...
+   21 itens de saldo pendente (R$ 13,087.61) - copiados sem recalcular
+   (nenhuma conferência de mês anterior encontrada - 1ª vez: valem os saldos legado do config e o histórico em CSV)
+2. Gerando aba 'SALDO pendente'...
+  [info] 5 linhas 'MESES ANTERIORES' adicionadas - só acontece 1 vez
+  [info] 3 linhas 'AJUSTE' (acumulado legado) adicionadas - só acontece 1 vez
+3. Lendo extrato do TOTVS...
+  [info] 1ª vez com --totvs - semeando o saldo inicial contábil real (config.SALDO_INICIAL_CONTABIL_TOTVS)
+   45 lançamentos neste extrato | 51 no acumulado total (CSV)
+4. Gerando aba 'Resumo' (fórmulas SUMIF: SALDO pendente x TOTVS)...
+5. Sem --controle-estoque - pulando aba 'Controle Estoque'.
+6. Salvo em: saida/conferencia_doadoras_2026-08.xlsx

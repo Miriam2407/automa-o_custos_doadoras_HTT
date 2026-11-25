@@ -1,0 +1,30 @@
+== Reconciliação 2026-08 ==
+1. Carregando lista de doadoras do mês...
+   8 doadoras nesta planilha
+2. Atualizando cadastro mestre histórico...
+   8 nomes distintos no cadastro mestre acumulado
+3. Carregando arquivos de custo por doadora (Uber, Táxi, Cerba, Ajuda de Custo, Medicamentos)...
+  [ok] lendo 'AJUDA DE CUSTO.xlsx' como AJUDA_DE_CUSTO
+  [ok] lendo 'TAXI.xlsx' como TRANSPORTE_TAXI
+  [ok] lendo 'UBER.xlsx' como TRANSPORTE_UBER
+  [ok] lendo 'CERBA.xlsx' como EXAMES_CERBA
+  [ok] lendo 'GENETICA.xlsx' como TESTES_GENETICOS
+   91 lançamentos carregados
+4. Carregando custos rateados (Médicos / Insumos / MGR)...
+  [ok] lendo 'CUSTOS RATEADOS.xlsx' como custo rateado (8 doadoras no mês)
+   16 linhas geradas pelo rateio (INSUMOS/MGR)
+  [ok] MEDICOS: R$ 15200.00 (referente a 2026-07, estava em SALDO) rateado entre 8 doadoras = R$ 1900.00 cada
+       lembrete: marque STATUS='CONSUMIDO' nessa(s) linha(s) na planilha, e adicione a linha de 2026-08 com STATUS='SALDO'
+   8 linhas geradas pelo rateio de MEDICOS
+5. Fazendo o matching e classificando SALDO/AJUSTES...
+   Resultado do matching:
+     doadora identificada: 94
+     SALDO: 21
+     AJUSTES: 0
+6. Atualizando controle de doadoras (histórico completo)...
+  [info] 1ª execução sem --controle-doadoras - controle de doadoras vai começar vazio e ser preenchido com as próximas 'lista_doadoras'
+   8 linhas no histórico de doadoras
+7. Gerando relatório Excel...
+   (nenhuma conferência de mês anterior encontrada em 'saida/' - sem linhas de AJUSTE pra manter)
+  [info] saldo legado de meses anteriores (sem doadora) adicionado à aba 'SALDO pendente' (5 categorias) - só acontece 1 vez
+   Relatório salvo em: saida/relatorio_reconciliacao_2026-08.xlsx
